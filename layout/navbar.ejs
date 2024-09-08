@@ -1,0 +1,484 @@
+<nav class="navbar bg-body-tertiary fixed-top navbar-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"
+      ><img class="logo" src="/assets/images/logo.png" alt="logo"
+    /></a>
+    <div class="d-flex align-items-center">
+      <span class="material-symbols-outlined"> notifications </span>
+      <span class="material-symbols-outlined"> shopping_cart </span>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Toggle navigation"
+      >
+        <div class="icon-adjust">
+          <span class="navbar-toggler-icon"></span>
+        </div>
+      </button>
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <div class="offcanvas-title" id="offcanvasNavbarLabel">探索全部</div>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav navbar-scroll flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">音樂</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">攝影</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">程式</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">藝術</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">人文</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">行銷</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">投資理財</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">心靈成長</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">職場技能</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">生活品味</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">生活品味</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">生活品味</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">生活品味</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">生活品味</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">生活品味</a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom-btn">
+          <button class="btn btn-primary-100" type="submit">登入 / 註冊</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg bg-white navbar-pc">
+  <div class="container-lg navbar-wrapper">
+    <div class="d-flex align-items-center justify-content-between w-60">
+      <a class="navbar-brand" href="#"
+        ><img class="logo" src="/assets/images/logo.png" alt="logo"
+      /></a>
+
+      <div class="d-flex align-items-center justify-content-around w-100">
+        <!-- 預設下選單會出現在探索，用 static 將選單回歸navbar下面 -->
+        <section class="nav-item dropdown position-static">
+          <a
+            class="nav-link d-flex align-items-center"
+            data-bs-toggle="dropdown"
+            data-bs-auto-close="outside"
+            href="#"
+            role="button"
+            aria-expanded="false"
+            >探索<span class="material-symbols-outlined p-0 ms-1">
+              keyboard_arrow_down
+            </span></a
+          >
+          <section class="dropdown-menu">
+            <!--dropdown-menu 沒有辦法加在多個 menu裡面，因此需要將所有選單包成群組，在用dropdown-menu一次呈現 -->
+            <div class="d-flex h-100">
+              <!-- 第一層選單 -->
+              <ul class="level-one bg-neutral-1 overflow-y-auto">
+                <li class="sticky-item-1">探索全部</li>
+                <li class="dropend position-static">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    >音樂</a
+                  >
+                </li>
+                <li class="dropend position-static">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    >攝影</a
+                  >
+                </li>
+                <li class="dropend position-static">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    >程式</a
+                  >
+                </li>
+                <li class="dropend position-static">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    >程式</a
+                  >
+                </li>
+                <li class="dropend position-static">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    >藝術</a
+                  >
+                </li>
+                <li class="dropend position-static">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    >人文</a
+                  >
+                </li>
+                <li class="dropend position-static">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    >行銷</a
+                  >
+                </li>
+                <li class="dropend position-static">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    >投資理財</a
+                  >
+                </li>
+                <li class="dropend position-static">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    >心靈成長</a
+                  >
+                </li>
+                <li class="dropend position-static">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    >職場技能</a
+                  >
+                </li>
+                <li class="dropend position-static">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    >生活品味</a
+                  >
+                </li>
+                <li class="dropend position-static">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    >美編設計</a
+                  >
+                </li>
+                <li class="dropend position-static">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    >香氛提案</a
+                  >
+                </li>
+                <li class="dropend position-static">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    >美妝保養</a
+                  >
+                </li>
+              </ul>
+
+              <!-- 第二層選單 -->
+              <ul class="level-two ms-0 overflow-y-auto">
+                <li class="sticky-item-1">所有程式</li>
+                <li class="dropend position-static">
+                  <a class="dropdown-item" href="#">程式入門</a>
+                </li>
+                <li class="dropend position-static">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close="outside"
+                    >網頁前端</a
+                  >
+                </li>
+                <li class="dropend position-static">
+                  <a class="dropdown-item" href="#">網頁後端</a>
+                </li>
+                <li class="dropend position-static">
+                  <a class="dropdown-item" href="#">網頁框架</a>
+                </li>
+                <li class="dropend position-static">
+                  <a class="dropdown-item" href="#">資訊安全</a>
+                </li>
+                <li class="dropend position-static">
+                  <a class="dropdown-item" href="#">程式語言</a>
+                </li>
+                <li class="dropend position-static">
+                  <a class="dropdown-item" href="#">遊戲開發</a>
+                </li>
+                <li class="dropend position-static">
+                  <a class="dropdown-item" href="#">資料科學</a>
+                </li>
+                <li class="dropend position-static">
+                  <a class="dropdown-item" href="#">人工智慧</a>
+                </li>
+                <li class="dropend position-static">
+                  <a class="dropdown-item" href="#">量化分析</a>
+                </li>
+              </ul>
+
+              <!-- 第三層選單 -->
+              <ul class="level-three ms-0 overflow-y-auto">
+                <li class="sticky-item-2">
+                  <img
+                    class="icon"
+                    src="../assets/images/icons/ic_fire.png"
+                    alt="fire"
+                  />
+                  熱門網頁前端課程
+                </li>
+                <li>
+                  <div class="border-bottom"></div>
+                </li>
+                <li class="dropend">
+                  <a href="#">
+                    <div class="d-flex w-100">
+                      <div class="start-box">
+                        <img
+                          src="../assets/images/course-5.png"
+                          alt="course-5"
+                          class="object-fit-cover"
+                        />
+                        <span>8 折</span>
+                      </div>
+                      <section class="end-box">
+                        <h3>小白也會！從零開始學習 Python 程式設計</h3>
+                        <div class="d-flex justify-content-between">
+                          <div
+                            class="object-fit-cover d-flex align-items-center"
+                          >
+                            <img
+                              src="../assets/images/avatar-2.png"
+                              alt="avatar-2"
+                            />
+                            <p class="ms-2">Kelly Hsu</p>
+                          </div>
+                          <div class="text-end">
+                            <span>NT$ 2,480</span>
+                            <div class="initial-price">NT$ 3,200</div>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-2"></div>
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-2"
+                        >
+                          <div class="Additional-info">已有 420 位同學加入</div>
+                          <div class="evaluate d-flex align-items-center">
+                            <span
+                              class="material-symbols-outlined material-symbols-filled p-0"
+                            >
+                              star
+                            </span>
+                            <div>4.0</div>
+                            <p>(333)</p>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <div class="border-bottom"></div>
+                </li>
+                <li class="dropend">
+                  <a href="#">
+                    <div class="d-flex w-100">
+                      <div class="start-box">
+                        <img
+                          src="../assets/images/course-5.png"
+                          alt="course-5"
+                          class="object-fit-cover"
+                        />
+                        <span>8 折</span>
+                      </div>
+                      <section class="end-box">
+                        <h3>小白也會！從零開始學習 Python 程式設計</h3>
+                        <div class="d-flex justify-content-between">
+                          <div
+                            class="object-fit-cover d-flex align-items-center"
+                          >
+                            <img
+                              src="../assets/images/avatar-2.png"
+                              alt="avatar-2"
+                            />
+                            <p class="ms-2">Kelly Hsu</p>
+                          </div>
+                          <div class="text-end">
+                            <span class="text-neutral-60">已購買</span>
+                            <div class="initial-price">NT$ 3,200</div>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-2"></div>
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-2"
+                        >
+                          <div class="Additional-info">已有 420 位同學加入</div>
+                          <div class="evaluate d-flex align-items-center">
+                            <span
+                              class="material-symbols-outlined material-symbols-filled p-0"
+                            >
+                              star
+                            </span>
+                            <div>4.0</div>
+                            <p>(333)</p>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <div class="border-bottom"></div>
+                </li>
+                <li class="dropend">
+                  <a href="#">
+                    <div class="d-flex w-100">
+                      <div class="start-box">
+                        <img
+                          src="../assets/images/course-5.png"
+                          alt="course-5"
+                          class="object-fit-cover"
+                        />
+                        <span>8 折</span>
+                      </div>
+                      <section class="end-box">
+                        <h3>小白也會！從零開始學習 Python 程式設計</h3>
+                        <div class="d-flex justify-content-between">
+                          <div
+                            class="object-fit-cover d-flex align-items-center"
+                          >
+                            <img
+                              src="../assets/images/avatar-2.png"
+                              alt="avatar-2"
+                            />
+                            <p class="ms-2">Kelly Hsu</p>
+                          </div>
+                          <div class="text-end">
+                            <span>NT$ 2,480</span>
+                            <div class="initial-price">NT$ 3,200</div>
+                          </div>
+                        </div>
+                        <div class="border-bottom my-2"></div>
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-2"
+                        >
+                          <div class="Additional-info">已有 420 位同學加入</div>
+                          <div class="evaluate d-flex align-items-center">
+                            <span
+                              class="material-symbols-outlined material-symbols-filled p-0"
+                            >
+                              star
+                            </span>
+                            <div>4.0</div>
+                            <p>(333)</p>
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <div class="border-bottom"></div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+
+        <form class="d-flex position-relative w-75" role="search">
+          <span class="material-symbols-outlined icon-adjust"> search </span>
+          <input
+            class="form-control"
+            type="search"
+            placeholder="搜尋各種音樂、數學、程式及設計課程"
+            aria-label="Search"
+          />
+          <button class="btn btn-primary-100 btn-adjust" type="submit">
+            搜尋
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <ul class="d-flex align-items-center">
+      <li>
+        <a href="#" class="material-symbols-outlined"> notifications </a>
+      </li>
+      <li>
+        <a href="#" class="material-symbols-outlined"> shopping_cart </a>
+      </li>
+      <li>
+        <button class="btn btn-primary-100" type="submit">登入 / 註冊</button>
+      </li>
+    </ul>
+  </div>
+</nav>

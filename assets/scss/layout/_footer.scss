@@ -1,0 +1,35 @@
+.border-redius-footer {
+    border-radius: 3rem 3rem 0 0;
+}
+
+.logo-list {
+    display: flex;
+    flex-direction: column;
+    &-content {
+        color: #FFF;
+        font-size: 0.875rem;
+        li {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+.icon-list {
+    &-content {
+        display: flex;
+        margin-bottom: 2rem;
+        li {
+            color:#FFF;
+            font-size: 2.5rem;
+            margin-left: 1rem;
+        }
+        li:first-child{
+            margin-left: 0;
+        }
+    }
+    p {
+        color:#FFF;
+        font-size: 0.75rem;
+        font-weight: 400;
+    }
+}

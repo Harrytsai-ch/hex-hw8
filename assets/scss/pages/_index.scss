@@ -1,0 +1,400 @@
+header{
+    .container-adjust {
+        padding-bottom:80px;
+    }
+
+    .swiper {
+        border-radius: 80px;
+        position: relative;
+        // 把多出來的花花隱藏
+        overflow: hidden;
+        // 花花
+        &::after {
+            position: absolute;
+            content:"";
+            top:0;
+            left:0;
+            background-image: url("/assets/images/deco/flower-4.png");
+            background-size: contain;
+            background-repeat:no-repeat ;
+            z-index: 1;
+            transform: translate(-35%,-50%);
+            height: 80%;
+            width: 80%;
+            max-height: 720px;
+            max-width: 720px;
+            @include media-breakpoint-up(lg) {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    .swiper-slide {
+        width: 100%;
+        // 手機版這裡會出現視窗問題
+        //          100vh - navbar - title - gap
+        height: calc(100vh - 58px - 66px);
+        
+
+        @include media-breakpoint-up(md) {
+            width: 90%;
+            height: calc(100vh - 152px - 80px);
+        }
+
+        a {
+            // 必須給高與寬100％
+            width: 100%;
+            height: 100%;
+            display: block;
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                // 以防圖片因為視窗縮放而變形
+                object-fit: cover;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            &::after {
+                position: absolute;
+                content: "探索感興趣的課程，今天開始上課";
+                left: 0;
+                bottom: 0;
+                color: #FFF;
+                padding: 2rem 6.5rem 2rem 7.5rem;
+                border-radius: 0px 100px 0 0;
+                font-weight: 600;
+                background-color: $primary-100;
+                font-size: 1.75rem;
+                @include media-breakpoint-up(lg) {
+                    font-size: 2.5rem;
+                }
+            }
+            
+            &::before {
+                position: absolute;
+                content: "\e5c8";
+                font-family: "Material Symbols Outlined";
+                left: 0;
+                bottom: 0;
+                color: #FFF;
+                font-weight: 600;
+                z-index: 1;
+                transform: translate(1950%,-80%);
+                font-size: 1.75rem;
+                @include media-breakpoint-up(lg) {
+                    font-size: 2.5rem;
+                    transform: translate(1850%,-50%);
+                }
+            }
+        }
+    }
+
+    .banner-promotion {
+        max-width: 343px;
+        width:100%;
+        position: absolute;
+        right:0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        background-color:#FFF;
+        border-radius: 100px;
+        padding: 0.5rem 2rem 0.5rem 0.5rem;
+        transform: translate(-5%,-50%);
+
+        @include media-breakpoint-up(md) {
+            transform: translate(-80%,-50%);
+        }
+
+        @include media-breakpoint-up(lg) {
+            max-width: 563px;
+            padding: 1rem 2rem 1rem 1rem;
+            left: 0;
+            bottom: 0;
+            transform: translate(5%,-220%);
+        }
+
+        h6 {
+            color: $neutral-100;
+            line-height: 1.5;
+            letter-spacing: 0.02rem;
+            font-size: 0.875rem;
+            @include media-breakpoint-up(lg) {
+                font-size: 1rem;
+            }
+        }
+        
+        .btn-adjust {
+            // 強制不換行
+            white-space: nowrap;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 0.5rem 0.75rem;
+            color: $primary-100;
+            background-color: $primary-10;
+            border-radius: 100px;
+            margin-right: 0.5rem;
+            img {
+                display: inline-block;
+            }
+        }
+    }
+
+    .banner-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: static;
+        // 用以下方法箭頭無法與文字在水平軸上對齊
+        // display: block;
+        // text-align: center;
+        padding: 1rem 0;
+        background-color: $primary-100;
+        color:#FFF;
+        span {
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+    }
+}
+
+.hot-course {
+    // 手機版的100vh計算回補
+    margin-top: 66px;
+    position: relative;
+    
+
+    @include media-breakpoint-up(md) {
+        margin-top: 0;
+    }
+
+    h2,p {
+        position: relative;
+        z-index: 1;
+    }
+
+    .card-box-content h5{
+        font-weight: 700;
+        line-height: 1.5;
+        height: 3.75rem;
+        margin-bottom: 0.5rem;
+    }
+    
+
+    .flower-deco  {
+        max-width: 200px;
+        max-height: 200px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateX(-50%);
+        @include media-breakpoint-up(md) {
+            max-width: 560px;
+            max-height: 560px;
+            transform: translate(-60%,-30%);
+        }
+    }
+    
+    .w-81{
+        width: 81%;
+    }
+
+
+    .badge {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+        border-radius:12px;
+        border: 1px solid $neutral-40;
+        background-color: #FFF;
+        &:hover {
+            background-color: $primary-100;
+            color: #FFF;
+         }
+    }
+
+    
+    .badge-icon {
+        font-size: 1rem;
+        margin-right: 0.25rem;
+        padding: 0;
+    }
+
+    .swiper-pagination-1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .btn-primary-100 {
+        background-color: $primary-100;
+        color:#FFF;
+        font-size: 1rem;
+        border-radius: 0.75rem;
+        font-weight: 600;
+    }
+
+}
+
+.bg-blue-gradient {
+    background: linear-gradient(180deg, #F0F6FF, #FFF);
+}
+
+.focus-course {
+    position: relative;
+
+    .flower-deco  {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-30%,60%);
+        @include media-breakpoint-up(md) {
+            transform: translate(-50%,-50%);
+            z-index: -1;
+        }
+    }
+
+    .flower-deco-position {
+        letter-spacing: 0;
+        position:relative;
+    }
+    
+    .ms-n2 {
+        margin-left: -8px;
+    }
+
+    h2 {
+        position: relative;
+        z-index: 1;
+        @include media-breakpoint-up(md) {
+            text-align: center;
+        }
+    }
+
+    .left-top-deco {
+        color:$alert-100;
+        background-color: $alert-10;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid $neutral-40;
+    }
+
+    .last-price {
+        color:$primary-100;
+    }
+
+    .swiper-pagination-2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide-ratio {
+        // 平板
+        width: 50%;
+        // 電腦
+        @include media-breakpoint-up(lg) {
+            width: 25%;
+        }
+    }
+}
+
+.class-menu {
+    background-color:$primary-100;
+    border-radius: 2.5rem;
+    padding-right:1rem;
+    padding-left:1rem;
+
+    h2 {
+        color: #FFF;
+    }
+ 
+    .btn-modify {
+        padding: 1.25rem;
+        background-color: #fff;
+        border-radius: 1rem;
+
+        .border-radius-1 {
+            border-radius: 1rem;
+        }
+
+        h6 {
+            font-size: 1rem;
+            font-weight: 600;
+            color:#1D2026;
+            margin-bottom: 0.5rem;
+        }
+        span{
+            font-size: 0.875rem;
+            color:#6E7485;
+            font-weight: 400;
+        }
+
+        &:hover{
+            background-color: #f8f9fa;
+        }
+
+        .p-arrow-icon {
+            padding: 20px 20px;
+        }
+    
+    }
+
+}
+
+.teacher-list {
+    .card-box-img {
+        // w-100會讓圖片大小與父容器一致，導致ml後圖片變形;
+            width: auto;
+            margin-left: 16px;
+            // 元件裡面有position: relative會讓圖片的圖層置頂
+            position: static;
+            img{
+                border-bottom-right-radius: 1.25rem;
+                height: auto;
+            }
+        }
+
+    .card-box-content {
+        padding: 1.5rem;
+        margin-right: 1.5rem;
+        margin-top: -2.5rem;
+        border-radius: 1.25rem;
+
+        h5 {
+            height: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-text {
+            color:$neutral-80;
+            font-size: 0.875rem;
+            font-weight: 400;
+            height: 84px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.swiper-pagination-5 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+

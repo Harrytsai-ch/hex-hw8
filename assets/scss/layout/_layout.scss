@@ -1,0 +1,112 @@
+.card-box {
+    display: flex;
+    flex-direction: column;
+    &-img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        img {
+            width: 100%;
+            //原始圖片大小不一 => 視窗的寬/原始圖片的寬*原始的高
+            height: calc(100vw / 306 * 200);
+            @include media-breakpoint-up(md) {
+                height: calc(50vw / 306 * 200);
+                // height: 100%;
+            }
+            @include media-breakpoint-up(lg) {
+                height: calc(25vw / 306 * 200);
+                // height: 100%;
+            }
+            border-top-left-radius: 1.25rem;
+            border-top-right-radius: 1.25rem;
+            object-fit: cover;
+        }
+        .left-top-deco {
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color:$primary-100;
+            background-color: $primary-10;
+            padding: 0.5rem 0.75rem;
+            border-radius: 100px;
+            transform: translate(10%,25%);
+        }
+    }
+
+    &-content {
+        border-bottom-left-radius: 1.25rem;
+        border-bottom-right-radius: 1.25rem;
+        background-color: #fff;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12);
+        padding: 1.5rem 1rem;
+        h5 {
+            font-weight: 600;
+            font-size: 1.25rem;
+            color:#000;
+            line-height: 1.2;
+            // 遇到螢幕像素變小會折行，這裡直接限縮高度
+            height: 3rem;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            text-overflow: ellipsis; /* 使用省略號替代溢出的文字 */
+        }
+
+        .tag {
+            padding: 0.25rem 0.75rem;
+            color: $neutral-80;
+            background-color:$neutral-40;
+            border-radius: 100px;
+            text-align: center;
+        }
+    
+        .author {
+            color:$neutral-80;
+            margin-left: 0.5rem;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    
+        .donate-status {
+            color: $primary-100;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family:  "Noto Sans TC";
+        }   
+    
+        .participation {
+            color:$neutral-80;
+            font-size: 0.875rem;
+            font-weight: 400;
+        }
+    
+        .last-price {
+            color:#000;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+    
+        .original-price {
+            color:#808080;
+            text-decoration: line-through;
+            font-size: 0.875rem;
+            font-weight: 400;
+            margin-left: 0.5rem;
+        }
+
+        .evaluate {
+            font-size: 0.875rem;
+            color:#000;
+            font-weight: 500;
+            span {
+                font-size: 0.875rem;
+            }
+    
+            p {
+                font-size: 0.875rem;
+                color:#808080;
+            }
+        }
+    }
+}
