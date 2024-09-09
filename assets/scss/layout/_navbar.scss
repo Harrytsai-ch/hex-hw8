@@ -1,8 +1,6 @@
 .navbar-sm {
     flex-wrap: nowrap;
-    @include media-breakpoint-up(md) {
-        display: none;
-    }
+
     .logo {
         width: 98.13px;
         height:13.75px;
@@ -87,14 +85,9 @@
     }
 }
 
-.navbar-pc {
+.navbar-md {
     padding-top:2.5rem;
     padding-bottom:1rem;
-    display: none;
-    
-    @include media-breakpoint-up(md) {
-        display: block;
-    }
 
     .logo {
         width: 157px;
@@ -136,15 +129,24 @@
         padding: 0;
         margin:0;
         border:none;
-        left:10%;
-        // 平板以上給最大當前螢幕解析度的八成
-        max-width: 80vw;
         width: 100%;
-    
+        // 平板以上給最大當前螢幕解析度的九成
+        left:1%;
+        max-width: 95vw;
+
+           // 大於992px
+        @include media-breakpoint-up(lg) {
+            left:10%;
+            max-width: 863px;
+        }
+
         // 大於1200px
         @include media-breakpoint-up(xl) {
-            max-width: 863px;
             left:15%;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            left:20%;
         }
 
         li {
@@ -185,17 +187,18 @@
         }
     }
 
+    // 每個選單的比例
     .level-one, .level-two {
-        width: 25%;
-        @include media-breakpoint-up(xl) {
+        width: 22.5%;
+        @include media-breakpoint-up(lg) {
             width: 26.85%;
         }
         border:1px solid $neutral-40;
     }
 
     .level-three { 
-        width: 50%;
-        @include media-breakpoint-up(xl) {
+        width: 55%;
+        @include media-breakpoint-up(lg) {
             width: 46.27%;
         }
         border:1px solid $neutral-40;

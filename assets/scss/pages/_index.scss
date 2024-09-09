@@ -257,7 +257,7 @@ header{
         top: 0;
         transform: translate(-30%,60%);
         @include media-breakpoint-up(md) {
-            transform: translate(-50%,-50%);
+            transform: translate(-50%,-40%);
             z-index: -1;
         }
     }
@@ -265,10 +265,6 @@ header{
     .flower-deco-position {
         letter-spacing: 0;
         position:relative;
-    }
-    
-    .ms-n2 {
-        margin-left: -8px;
     }
 
     h2 {
@@ -297,15 +293,6 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    .slide-ratio {
-        // 平板
-        width: 50%;
-        // 電腦
-        @include media-breakpoint-up(lg) {
-            width: 25%;
-        }
     }
 }
 
@@ -352,7 +339,47 @@ header{
 
 }
 
+
 .teacher-list {
+    position: relative;
+    z-index: 1;
+    
+    h2{
+        @include media-breakpoint-up(md) {
+            text-align: center;
+        }
+    }
+
+    .bg-deco-line {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        // 不跑出X軸的權宜之計
+        // 電腦版(lg)以上
+        max-width: 90vw;
+        transform: translate(-5%,150%);
+        @include media-breakpoint-up(xl) {
+            max-width: 80vw;
+            transform: translate(-10%,150%);
+        }
+    }
+
+    .flower-deco  {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-50%,-40%);
+        z-index: -1;
+    }
+
+    .flower-deco-position {
+        letter-spacing: 0;
+        position:relative;
+    }
+
     .card-box-img {
         // w-100會讓圖片大小與父容器一致，導致ml後圖片變形;
             width: auto;
@@ -381,7 +408,7 @@ header{
             font-size: 0.875rem;
             font-weight: 400;
             height: 84px;
-            overflow: hidden;
+            overflow: clip;
             text-overflow: ellipsis;
         }
     }
