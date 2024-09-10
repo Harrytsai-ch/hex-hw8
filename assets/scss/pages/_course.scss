@@ -1,0 +1,234 @@
+.program-course {
+    position: relative;
+    overflow: hidden;
+    // 手機版因為navbar fix，多上推 58px
+    margin-top: 58px;
+    @include media-breakpoint-up(md) {
+        margin-top: 0;
+    }
+    @include media-breakpoint-up(lg) {
+        overflow: visible;
+        // 不能用hidden卻能用clip
+        // overflow-y: hidden;
+        overflow-y: clip;
+    }
+
+    .left-top-deco-flower {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-30%,-10%);
+    }
+
+    .right-bottom-deco-flower {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translate(0%,50%);
+    }
+
+    .left-deco-round {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-100%,175%);
+    }
+
+    .right-deco-round {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(-50%,100%);
+    }
+
+    .breadcrumb{     
+        &-item {
+            color:$neutral-60;
+            font-size: 1rem;
+            font-weight: 400;
+            &.active {
+                color:$neutral-80;
+            }
+        }
+    }
+    
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: $neutral-100;
+        @include media-breakpoint-up(md) {
+            font-size: 3rem;
+            position: relative;
+        }
+    }
+
+    .badge {
+        font-size: 1rem;
+        font-weight: 400;
+        color: $neutral-80;
+        background-color: #fff;
+        border-radius: 0.75rem;
+        border: 1px solid $neutral-40;
+        &:hover {
+            background-color: $primary-100;
+            color: #fff;
+        }
+    }
+}
+
+.pick-up-course {
+
+    .nav-underline {
+        border-bottom: 1px solid $neutral-40;
+        --bs-nav-underline-border-width:none;
+       
+    }
+    // 這樣權重才夠
+    .nav-item .nav-link{
+        &.active {
+            color:$primary-100;
+            border-bottom:4px solid $primary-100;
+        }
+
+    }
+
+     .last-price {
+        color:$primary-100;
+    }
+}
+
+.btn-modify:hover {
+    background-color: $neutral-40;
+}
+
+.teacher-intro {
+    h5 {
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+}
+
+.search-course {
+    h6 {
+        font-size: 1rem;
+        font-weight: 600;
+        color:$neutral-100;
+        text-align: center;
+    }
+    
+    .nav-link.active {
+        color:$primary-100;
+        font-weight: 600;
+    }
+    
+    h3 {
+        font-weight: 600;
+    }
+
+    .last-price {
+        color: $primary-100;
+    }
+
+    .left-top-deco {
+        background-color: $alert-10;
+        color: $alert-100;
+    }
+
+
+    .start-box {
+        width: 28.6%;
+        padding: 0;
+        position: relative;
+        img {
+            // 維持圖片正方形
+            width: calc((100vw - 24px) * 0.28);
+            height: calc((100vw - 24px) * 0.27);
+            max-height:145px;
+            max-width: 100%;
+            border-radius: 12px;
+        }
+
+        span {
+            position: absolute;
+            left: 0;
+            top:0;
+            transform: translate(10%,20%);
+            background-color:#FFE0D7;
+            border-radius: 100px;
+            color:$alert-100;
+            padding: 4px 8px;
+            font-size: 14px;
+        }
+    }
+
+    .end-box {
+        width: calc(100% - 28.6%);
+        margin-left: 0.5rem;
+        h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        p {
+            font-size: 1rem;
+            color:$neutral-80;
+            font-weight: 400;
+        }
+
+        span {
+            color:$primary-100;
+            font-weight: 600;
+            &.text-neutral-60 {
+                color:$neutral-60;
+            }
+        }
+
+        .tag {
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            color:$neutral-80;
+            background-color: $neutral-40;
+            border-radius: 100px;
+        }
+
+        .initial-price {
+            font-size: 0.75rem;
+            color:#808080;
+            text-decoration: line-through;
+        }
+
+        .Additional-info {
+            color:$neutral-80;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .evaluate {
+            font-size: 14px;
+            font-weight: 500;
+            span {
+                color: #F6BD2B;
+            }
+            p {
+                color:$neutral-80;
+                font-size: 14px;
+                margin-left: 4px;
+            }
+        }
+    }
+
+
+    .page-item .page-link {
+        color:$neutral-80;
+        border-radius: 0.5rem;
+        &.active {
+            color:#fff;
+        }
+    }
+}

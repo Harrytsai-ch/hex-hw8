@@ -32,8 +32,8 @@ header{
 
     .swiper-slide {
         width: 100%;
-        // 手機版這裡會出現視窗問題
-        //          100vh - navbar - title - gap
+        // 手機版這裡會出現視窗問題(因為navbar是position-fix)
+        //          100vh - navbar - title 
         height: calc(100vh - 58px - 66px);
         
 

@@ -2,8 +2,16 @@
     color:$neutral-80;
 }
 
+.text-neutral-100 {
+    color:$neutral-100;
+}
+
 .text-primary-100 {
     color:$primary-100;
+}
+
+.bg-neutral-10 {
+    background-color:$neutral-10;
 }
 
 .bg-orange {
@@ -54,8 +62,8 @@
 
 .py-md-80 {
     @include media-breakpoint-up(md) {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
 }
 
@@ -72,7 +80,6 @@
 }
 
 .my-120 {
-    
     margin-top: 7.5rem;
     margin-bottom: 7.5rem;
 }
@@ -113,6 +120,15 @@
 .border-radius-40 {
     border-radius: 2.5rem;
 }
+
+.border-radius-12 {
+    border-radius: 0.75rem;
+}
+
+.border-neutral-40 {
+    border:1px solid $neutral-10;
+}
+
 
 h2 {
     margin-bottom: 0.5rem;
