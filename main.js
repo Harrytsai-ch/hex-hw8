@@ -130,11 +130,9 @@ var mycard_9 = new Swiper(".mycard-10", {
 
 // -------
 
+
 var prevButton = document.querySelector('.swiper-button-prev');
 var nextButton = document.querySelector('.swiper-button-next');
-
-var prevButton1 = document.querySelector('.swiper-button-prev1');
-var nextButton1 = document.querySelector('.swiper-button-next1');
 
 prevButton.addEventListener('click', function() {
   banner.slidePrev(); // 切換到前一個slide
@@ -143,6 +141,9 @@ prevButton.addEventListener('click', function() {
 nextButton.addEventListener('click', function() {
   banner.slideNext(); // 切換到下一個slide
 });
+
+var prevButton1 = document.querySelector('.swiper-button-prev1');
+var nextButton1 = document.querySelector('.swiper-button-next1');
 
 prevButton1.addEventListener('click', function() {
   mycard_8.slidePrev();
